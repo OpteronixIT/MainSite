@@ -1,0 +1,86 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Phone, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <div className="space-y-12">
+      {/* Hero Section */}
+      <section className="bg-black text-white py-20 px-6 text-center">
+        <h1 className="text-5xl font-bold mb-4">Modern IT Solutions for Healthcare & Business</h1>
+        <p className="text-xl max-w-3xl mx-auto mb-6">
+          OpteronixIT delivers reliable, secure, and customized IT services to support your daily operations and long-term growth.
+        </p>
+        <Button className="text-lg px-6 py-4">Request a Consultation</Button>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-6 bg-gray-100 text-center">
+        <h2 className="text-4xl font-bold mb-10">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "IT Audits & Remediation",
+              description: "Thorough analysis and resolution of existing IT issues across workstations, servers, and network.",
+            },
+            {
+              title: "Managed IT Services",
+              description: "Proactive monthly management including patching, backups, support, and vendor liaison.",
+            },
+            {
+              title: "Infrastructure Setup",
+              description: "End-to-end setup of PCs, servers, Wi-Fi, printers, and phones customized to your needs.",
+            },
+            {
+              title: "Cybersecurity",
+              description: "Managed antivirus, monitoring, and compliance strategies to protect your data and systems.",
+            },
+            {
+              title: "Cloud Solutions",
+              description: "Email, storage, and productivity solutions like Microsoft 365 and cloud backups.",
+            },
+            {
+              title: "Remote & On-Site Support",
+              description: "Timely, expert IT support—remote first, on-site when needed—for minimal downtime.",
+            },
+          ].map((service, idx) => (
+            <Card key={idx} className="text-left">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
+                <p>{service.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6">Why Choose OpteronixIT?</h2>
+        <p className="text-xl max-w-3xl mx-auto">
+          We specialize in serving small businesses and healthcare practices with tailored IT solutions, responsive support, and a no-nonsense approach to technology.
+        </p>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-black text-white py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6">Let's Talk</h2>
+        <p className="text-xl max-w-2xl mx-auto mb-6">
+          Ready to streamline your IT? Reach out for a free consultation or quote.
+        </p>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+          <div className="flex items-center gap-2">
+            <Phone /> <span>(469) 844-7002</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Mail /> <span>opteronixit@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin /> <span>Serving the DFW</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
