@@ -5,8 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | OpteronixIT</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .service-card {
+      transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      background-color: #1A1F27;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    .icon-animate {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.85; }
+    }
+  </style>
 </head>
-<body class="bg-[#0E1116] text-gray-900">
+<body class="bg-[#0E1116] text-white">
   <header class="bg-[#0E1116] shadow-sm">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center">
@@ -15,31 +34,75 @@
         </a>
       </div>
       <nav class="space-x-6">
-        <a href="/" class="text-blue-400">Home</a>
-        <a href="/about" class="text-blue-400">About</a>
+        <a href="/" class="hover:text-blue-400 transition duration-300">Home</a>
+        <a href="/about" class="hover:text-blue-400 transition duration-300">About</a>
         <a href="/services" class="text-blue-400 font-semibold">Services</a>
-        <a href="/contact" class="text-blue-400">Contact</a>
+        <a href="/contact" class="hover:text-blue-400 transition duration-300">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold mb-6 text-center">Our Services</h1>
-    <p class="text-lg text-gray-900 mb-8 text-center">We offer a comprehensive suite of IT services tailored to the unique needs of small businesses and healthcare providers.</p>
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold mb-6 text-center animate__animated animate__fadeIn text-gray-900">Our Services</h1>
+    <p class="text-lg text-gray-600 mb-12 text-center animate__animated animate__fadeIn animate__delay-1s">We offer a comprehensive suite of IT services tailored to the unique needs of small businesses and healthcare providers.</p>
 
-    <ul class="space-y-6">
-      <li><h2 class="text-2xl font-semibold text-gray-900">Build Outs</h2><p class="text-gray-900">From infrastructure planning to hardware installation, we help set up your tech from the ground up.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">HIPAA Compliance</h2><p class="text-gray-900">Ensure your practice meets all HIPAA requirements with our in-depth compliance solutions.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Computer Support</h2><p class="text-gray-900">Reliable desktop, laptop, and workstation support for your team’s everyday tech issues.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Data Backup & Recovery</h2><p class="text-gray-900">Safeguard critical data and restore it quickly in the event of loss or disaster.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Email and Website Solutions</h2><p class="text-gray-900">Professional email setup, management, and hosting for your business website.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Managed IT Services</h2><p class="text-gray-900">Complete IT management including monitoring, updates, and technical support.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Managed Security / HIPAA</h2><p class="text-gray-900">Security solutions tailored for HIPAA compliance and medical practice needs.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Network Design</h2><p class="text-gray-900">Custom network planning and implementation for optimal performance and scalability.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Phone Solutions</h2><p class="text-gray-900">Modern VoIP and unified communication systems tailored for your business.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Surveillance</h2><p class="text-gray-900">Secure your premises with professionally installed and monitored camera systems.</p></li>
-      <li><h2 class="text-2xl font-semibold text-gray-900">Other IT Solutions</h2><p class="text-gray-900">Need something unique? We offer custom IT solutions designed to meet your exact requirements.</p></li>
-    </ul>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-tools text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Build Outs</h2>
+        <p class="text-gray-600">From infrastructure planning to hardware installation, we help set up your tech from the ground up.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-user-shield text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">HIPAA Compliance</h2>
+        <p class="text-gray-600">Ensure your practice meets all HIPAA requirements with our in-depth compliance solutions.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-laptop-medical text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Computer Support</h2>
+        <p class="text-gray-600">Reliable desktop, laptop, and workstation support for your team’s everyday tech issues.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-database text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Data Backup & Recovery</h2>
+        <p class="text-gray-600">Safeguard critical data and restore it quickly in the event of loss or disaster.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-envelope text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Email and Website Solutions</h2>
+        <p class="text-gray-600">Professional email setup, management, and hosting for your business website.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-network-wired text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Managed IT Services</h2>
+        <p class="text-gray-600">Complete IT management including monitoring, updates, and technical support.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-shield-alt text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Managed Security / HIPAA</h2>
+        <p class="text-gray-600">Security solutions tailored for HIPAA compliance and medical practice needs.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-project-diagram text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Network Design</h2>
+        <p class="text-gray-600">Custom network planning and implementation for optimal performance and scalability.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-phone-volume text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Phone Solutions</h2>
+        <p class="text-gray-600">Modern VoIP and unified communication systems tailored for your business.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-video text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Surveillance</h2>
+        <p class="text-gray-600">Secure your premises with professionally installed and monitored camera systems.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-[#12161D] service-card">
+        <i class="fas fa-cogs text-blue-400 text-3xl mb-4 icon-animate"></i>
+        <h2 class="text-xl font-semibold text-gray-900">Other IT Solutions</h2>
+        <p class="text-gray-600">Need something unique? We offer custom IT solutions designed to meet your exact requirements.</p>
+      </div>
+    </div>
   </main>
 
   <footer class="bg-[#1A1F27] py-6 text-center text-sm text-gray-400">
