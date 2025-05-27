@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | OpteronixIT</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function showThankYou(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById("form-section").innerHTML = `
+            <div class="bg-green-100 text-green-800 p-6 rounded text-center">
+              <h2 class="text-2xl font-semibold mb-2">Thank You!</h2>
+              <p>Your message has been successfully sent. We'll get back to you soon.</p>
+            </div>`;
+        } else {
+          alert("There was an issue submitting the form. Please try again.");
+        }
+      }).catch(error => {
+        alert("There was an error. Please check your internet connection and try again.");
+      });
+    }
+  </script>
 </head>
 <body class="bg-[#12161C] text-white">
   <header class="bg-[#12161C] shadow-sm">
@@ -23,11 +49,11 @@
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-6 py-12">
+  <main class="max-w-3xl mx-auto px-6 py-12" id="form-section">
     <h1 class="text-4xl font-bold mb-6 text-center text-gray-900">Contact Us</h1>
     <p class="text-lg text-gray-900 mb-6 text-center">We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
 
-    <form action="https://formspree.io/f/xanoggnp" method="POST" class="space-y-6 bg-[#1A1F27] p-6 rounded-lg shadow-md">
+    <form action="https://formspree.io/f/xanoggnp" method="POST" onsubmit="showThankYou(event)" class="space-y-6 bg-[#1A1F27] p-6 rounded-lg shadow-md">
       <div>
         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
         <input type="text" name="name" id="name" required class="w-full p-3 rounded bg-[#2A2F38] text-gray-900 border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
@@ -38,7 +64,7 @@
       </div>
       <div>
         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone Number</label>
-        <input type="tel" name="phone" id="phone" required class="w-full p-3 rounded bg-[#2A2F38] text-gray-900 border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
+        <input type="number" name="phone" id="phone" required class="w-full p-3 rounded bg-[#2A2F38] text-gray-900 border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
       </div>
       <div>
         <label for="services" class="block mb-2 text-sm font-medium text-gray-900">Services Needed</label>
@@ -52,7 +78,7 @@
     </form>
   </main>
 
-  <footer class="bg-[#1A1F27] py-6 text-center text-sm text-gray-900">
+  <footer class="bg-[#1A1F27] py-6 text-center text-sm text-gray-400">
     &copy; 2025 OpteronixIT. All rights reserved.
   </footer>
 </body>
