@@ -1,86 +1,45 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin } from "lucide-react";
-import Image from "next/image";
-
-export default function Home() {
-  return (
-    <div className="space-y-12">
-      {/* Hero Section */}
-      <section className="bg-black text-white py-20 px-6 text-center">
-        <h1 className="text-5xl font-bold mb-4">Modern IT Solutions for Healthcare & Business</h1>
-        <p className="text-xl max-w-3xl mx-auto mb-6">
-          OpteronixIT delivers reliable, secure, and customized IT services to support your daily operations and long-term growth.
-        </p>
-        <Button className="text-lg px-6 py-4">Request a Consultation</Button>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-6 bg-gray-100 text-center">
-        <h2 className="text-4xl font-bold mb-10">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "IT Audits & Remediation",
-              description: "Thorough analysis and resolution of existing IT issues across workstations, servers, and network.",
-            },
-            {
-              title: "Managed IT Services",
-              description: "Proactive monthly management including patching, backups, support, and vendor liaison.",
-            },
-            {
-              title: "Infrastructure Setup",
-              description: "End-to-end setup of PCs, servers, Wi-Fi, printers, and phones customized to your needs.",
-            },
-            {
-              title: "Cybersecurity",
-              description: "Managed antivirus, monitoring, and compliance strategies to protect your data and systems.",
-            },
-            {
-              title: "Cloud Solutions",
-              description: "Email, storage, and productivity solutions like Microsoft 365 and cloud backups.",
-            },
-            {
-              title: "Remote & On-Site Support",
-              description: "Timely, expert IT support—remote first, on-site when needed—for minimal downtime.",
-            },
-          ].map((service, idx) => (
-            <Card key={idx} className="text-left">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                <p>{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reliable IT services and consulting tailored for small businesses and healthcare." />
+    <title>OpteronixIT | Smart IT Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="https://via.placeholder.com/40x40?text=IT" alt="Logo" class="w-10 h-10" />
+          <h1 class="text-2xl font-bold text-blue-600">OpteronixIT</h1>
         </div>
-      </section>
+        <nav class="space-x-6">
+          <a href="#about" class="hover:text-blue-600">About</a>
+          <a href="#services" class="hover:text-blue-600">Services</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-      {/* About Section */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">Why Choose OpteronixIT?</h2>
-        <p className="text-xl max-w-3xl mx-auto">
-          We specialize in serving small businesses and healthcare practices with tailored IT solutions, responsive support, and a no-nonsense approach to technology.
-        </p>
-      </section>
+    <main class="py-20 px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">
+        Empowering Your Business with Smart IT Solutions
+      </h2>
+      <p class="text-lg max-w-xl mx-auto mb-8">
+        At OpteronixIT, we provide scalable IT consulting and services tailored for small businesses and healthcare providers.
+      </p>
+      <a
+        href="#contact"
+        class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+      >
+        Get Started
+      </a>
+    </main>
 
-      {/* Contact Section */}
-      <section className="bg-black text-white py-20 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">Let's Talk</h2>
-        <p className="text-xl max-w-2xl mx-auto mb-6">
-          Ready to streamline your IT? Reach out for a free consultation or quote.
-        </p>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-          <div className="flex items-center gap-2">
-            <Phone /> <span>(469) 844-7002</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mail /> <span>opteronixit@gmail.com</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <MapPin /> <span>Serving the DFW</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+    <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
+      &copy; 2025 OpteronixIT. All rights reserved.
+    </footer>
+  </body>
+</html>
