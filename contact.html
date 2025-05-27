@@ -24,27 +24,35 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold mb-6 text-center">Contact Us</h1>
-    <p class="text-lg text-gray-200 mb-6 text-center">We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+    <h1 class="text-4xl font-bold mb-6 text-center text-gray-900">Contact Us</h1>
+    <p class="text-lg text-gray-900 mb-6 text-center">We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
 
     <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6 bg-[#1A1F27] p-6 rounded-lg shadow-md">
       <div>
-        <label for="name" class="block mb-2 text-sm font-medium">Name</label>
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
         <input type="text" name="name" id="name" required class="w-full p-3 rounded bg-[#2A2F38] text-white border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
       </div>
       <div>
-        <label for="email" class="block mb-2 text-sm font-medium">Email</label>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
         <input type="email" name="email" id="email" required class="w-full p-3 rounded bg-[#2A2F38] text-white border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
       </div>
       <div>
-        <label for="message" class="block mb-2 text-sm font-medium">Message</label>
-        <textarea name="message" id="message" rows="5" required class="w-full p-3 rounded bg-[#2A2F38] text-white border border-gray-600 focus:outline-none focus:ring focus:border-blue-500"></textarea>
+        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required class="w-full p-3 rounded bg-[#2A2F38] text-white border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
+      </div>
+      <div>
+        <label for="services" class="block mb-2 text-sm font-medium text-gray-900">Services Needed</label>
+        <input type="text" name="services" id="services" required class="w-full p-3 rounded bg-[#2A2F38] text-white border border-gray-600 focus:outline-none focus:ring focus:border-blue-500">
+      </div>
+      <div>
+        <label for="comments" class="block mb-2 text-sm font-medium text-gray-900">Comments</label>
+        <textarea name="comments" id="comments" rows="5" required class="w-full p-3 rounded bg-[#2A2F38] text-white border border-gray-600 focus:outline-none focus:ring focus:border-blue-500"></textarea>
       </div>
       <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded">Send Message</button>
     </form>
   </main>
 
-  <footer class="bg-[#1A1F27] py-6 text-center text-sm text-gray-400">
+  <footer class="bg-[#1A1F27] py-6 text-center text-sm text-gray-900">
     &copy; 2025 OpteronixIT. All rights reserved.
   </footer>
 </body>
