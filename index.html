@@ -89,42 +89,44 @@
       </ul>
     </section>
 
-   <section class="text-center mb-20">
+  
+
+ <section class="text-center mb-20">
   <h2 class="text-3xl font-bold mb-8">Client Testimonials</h2>
 
-  <!-- Desktop: Scrolling Strip -->
-  <div class="hidden md:block relative overflow-hidden">
-    <div class="whitespace-nowrap animate-scroll hover:[animation-play-state:paused]">
-      <!-- Testimonials -->
-      <div class="inline-block bg-[#2d3748] text-left text-white p-6 mx-4 rounded-lg shadow-md w-80 align-top">
+  <!-- Desktop Scrolling Strip -->
+  <div class="hidden md:block overflow-hidden relative">
+    <div class="flex w-max animate-scroll hover:[animation-play-state:paused]">
+      <!-- Repeat this block for each testimonial -->
+      <div class="bg-[#2d3748] text-white p-6 mx-4 rounded-lg shadow-md w-80 shrink-0">
         <p class="italic text-gray-300">"OpteronixIT helped us modernize our infrastructure without disrupting patient care. A true technology partner!"</p>
         <p class="mt-2 font-semibold text-blue-400">— Dr. Patel</p>
       </div>
-      <div class="inline-block bg-[#2d3748] text-left text-white p-6 mx-4 rounded-lg shadow-md w-80 align-top">
+      <div class="bg-[#2d3748] text-white p-6 mx-4 rounded-lg shadow-md w-80 shrink-0">
         <p class="italic text-gray-300">"We’ve seen a massive reduction in IT issues thanks to their proactive support and guidance."</p>
         <p class="mt-2 font-semibold text-blue-400">— Mark C, Practice Manager</p>
       </div>
-      <div class="inline-block bg-[#2d3748] text-left text-white p-6 mx-4 rounded-lg shadow-md w-80 align-top">
+      <div class="bg-[#2d3748] text-white p-6 mx-4 rounded-lg shadow-md w-80 shrink-0">
         <p class="italic text-gray-300">"Their team is responsive, clear, and great at explaining tech to non-tech folks. Highly recommended!"</p>
         <p class="mt-2 font-semibold text-blue-400">— Jenny R, Office Admin</p>
       </div>
-      <div class="inline-block bg-[#2d3748] text-left text-white p-6 mx-4 rounded-lg shadow-md w-80 align-top">
+      <div class="bg-[#2d3748] text-white p-6 mx-4 rounded-lg shadow-md w-80 shrink-0">
         <p class="italic text-gray-300">"Excellent support and a real partner in keeping our systems secure and running smoothly."</p>
         <p class="mt-2 font-semibold text-blue-400">— Michael D, Healthcare Director</p>
       </div>
-      <!-- Duplicate for seamless loop -->
-      <div class="inline-block bg-[#2d3748] text-left text-white p-6 mx-4 rounded-lg shadow-md w-80 align-top">
+      <!-- Duplicate for seamless scroll loop -->
+      <div class="bg-[#2d3748] text-white p-6 mx-4 rounded-lg shadow-md w-80 shrink-0">
         <p class="italic text-gray-300">"OpteronixIT helped us modernize our infrastructure without disrupting patient care. A true technology partner!"</p>
         <p class="mt-2 font-semibold text-blue-400">— Dr. Patel</p>
       </div>
-      <div class="inline-block bg-[#2d3748] text-left text-white p-6 mx-4 rounded-lg shadow-md w-80 align-top">
+      <div class="bg-[#2d3748] text-white p-6 mx-4 rounded-lg shadow-md w-80 shrink-0">
         <p class="italic text-gray-300">"We’ve seen a massive reduction in IT issues thanks to their proactive support and guidance."</p>
         <p class="mt-2 font-semibold text-blue-400">— Mark C, Practice Manager</p>
       </div>
     </div>
   </div>
 
-  <!-- Mobile: Stacked Static Layout -->
+  <!-- Mobile Static Grid -->
   <div class="grid md:hidden gap-6 max-w-xl mx-auto">
     <div class="bg-[#2d3748] text-white p-6 rounded-lg shadow-md">
       <p class="italic text-gray-300">"OpteronixIT helped us modernize our infrastructure without disrupting patient care. A true technology partner!"</p>
@@ -144,19 +146,18 @@
     </div>
   </div>
 
-  <!-- Add keyframe animation -->
+  <!-- Scroll animation styles -->
   <style>
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
     .animate-scroll {
-      display: inline-block;
-      min-width: 200%;
       animation: scroll 40s linear infinite;
     }
   </style>
 </section>
+
 
     <section class="text-center">
       <h2 class="text-3xl font-bold mb-4">Why Choose OpteronixIT?</h2>
